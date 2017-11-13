@@ -1,11 +1,9 @@
 package com.example.miniapp;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-import com.example.base.BaseActivity;
-
-
-public class MiniActivity extends BaseActivity {
+public class MiniActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,7 +11,6 @@ public class MiniActivity extends BaseActivity {
         setContentView(R.layout.activity_mini);
     }
 
-    @Override
     public void showString(String name) {
         System.out.println("Mini App : " + name);
     }
