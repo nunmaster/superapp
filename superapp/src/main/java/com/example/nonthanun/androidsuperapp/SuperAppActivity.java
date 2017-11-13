@@ -1,14 +1,12 @@
 package com.example.nonthanun.androidsuperapp;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.miniapp.HomeObject;
-import com.example.miniapp.MainActivity;
+import com.example.miniapp.MiniActivity;
 
 public class SuperAppActivity extends AppCompatActivity {
 
@@ -19,7 +17,7 @@ public class SuperAppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        miniAppButton = (Button) findViewById(R.id.minibutton);
+        miniAppButton = findViewById(R.id.minibutton);
         miniAppButton.setOnClickListener(onClickListener);
     }
 
@@ -27,8 +25,10 @@ public class SuperAppActivity extends AppCompatActivity {
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            MainActivity mainActivity = new MainActivity();
-            mainActivity.showString();
+            MiniActivity miniActivity = new MiniActivity();
+            miniActivity.showString("NONTHANUN");
+            Intent intent = new Intent(SuperAppActivity.this, MiniActivity.class);
+            startActivity(intent);
         }
     };
 }

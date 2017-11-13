@@ -5,16 +5,16 @@ import android.os.Bundle;
 import com.example.base.BaseActivity;
 
 
-public class MainActivity extends BaseActivity {
+public class MiniActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mini);
     }
 
     @Override
-    public void showString() {
-        System.out.println("Mini App");
+    public void showString(String name) {
+        System.out.println("Mini App : " + name);
     }
 }
